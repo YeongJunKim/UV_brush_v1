@@ -112,9 +112,6 @@ int main(void)
   htim2.Instance->CCR2 = 500;
   htim2.Instance->CCR3 = 500;
 
-  set_boost(OFF);
-  set_uv_led(OFF);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

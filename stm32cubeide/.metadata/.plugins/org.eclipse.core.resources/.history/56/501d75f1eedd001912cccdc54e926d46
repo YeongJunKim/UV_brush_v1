@@ -112,9 +112,6 @@ int main(void)
   htim2.Instance->CCR2 = 500;
   htim2.Instance->CCR3 = 500;
 
-  set_boost(OFF);
-  set_uv_led(OFF);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -391,12 +388,9 @@ static void MX_GPIO_Init(void)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	if(GPIO_Pin == SWITCH_Pin)
-	{
-		set_charging_led(ON);
-		set_boost(ON);
-		set_uv_led(ON);
-	}
+	set_charging_led(ON);
+	set_boost(ON);
+	set_uv_led(ON);
 }
 /* USER CODE END 4 */
 
