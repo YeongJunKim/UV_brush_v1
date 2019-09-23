@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;UV_brush_holder/Inc/brush.h&apos;" deleteContents="false" description="Delete resource &apos;UV_brush_holder/Inc/brush.h&apos;" element1="/UV_brush_holder/Inc/brush.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1569233011415"/>
+</session>
