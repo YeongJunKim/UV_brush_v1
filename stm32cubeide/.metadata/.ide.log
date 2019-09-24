@@ -1100,3 +1100,602 @@
 2019-09-23 19:24:59,661 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 578mS.
 2019-09-23 19:24:59,663 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 2mS.
 2019-09-23 19:24:59,666 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2019-09-24 12:54:04,576 [INFO] Gpio:238 - dependency for GPIO [COMP2, SYS, TIM2, USART2]
+2019-09-24 12:54:15,511 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Clock Configuration
+2019-09-24 13:46:51,536 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Pinout & Configuration
+2019-09-24 13:46:57,928 [INFO] NvicIntPanel:85 - NVIC parent = javax.swing.JTabbedPane[,0,44,560x379,layout=com.st.microxplorer.stobjectsui.STTabbedPaneUI$TabbedPaneLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=352,maximumSize=,minimumSize=,preferredSize=,haveRegistered=false,tabPlacement=TOP]
+2019-09-24 13:47:10,432 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Clock Configuration
+2019-09-24 13:47:10,806 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Pinout & Configuration
+2019-09-24 13:47:12,768 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 672853264 Bytes (940572672)
+2019-09-24 13:47:14,159 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 681430288 Bytes (940572672)
+2019-09-24 13:47:14,279 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 13:47:14,279 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 13:47:14,279 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 13:47:14,279 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 13:47:14,280 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 13:47:14,280 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 13:47:14,281 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 13:47:14,445 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 13:47:14,500 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 13:47:14,563 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 13:47:14,621 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 13:47:15,008 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:47:15,008 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 13:47:15,009 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:47:15,010 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:47:15,011 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 13:47:15,011 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:47:15,012 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:47:15,012 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 13:47:15,013 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:47:15,014 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:47:15,014 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 13:47:15,015 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:47:15,016 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:47:15,016 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 13:47:15,017 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:47:15,018 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 13:47:15,019 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:47:15,049 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 13:47:15,178 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 13:47:15,222 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 13:47:15,314 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 13:47:15,363 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 13:47:15,472 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 13:47:15,494 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 13:47:15,541 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 13:47:15,576 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 13:47:15,652 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 13:47:15,666 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 13:47:15,666 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 13:47:15,667 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 13:47:15,667 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 13:47:15,697 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 13:47:15,763 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 13:47:15,795 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 13:47:15,918 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 13:47:16,721 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 527mS.
+2019-09-24 13:47:16,723 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 13:47:16,892 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 13:47:16,897 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 13:47:16,971 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 13:47:16,972 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 13:47:17,148 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 13:47:17,149 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 13:47:17,517 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 794mS.
+2019-09-24 13:47:17,518 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 13:47:17,522 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 13:59:53,476 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 696390936 Bytes (1045430272)
+2019-09-24 13:59:54,394 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 703442160 Bytes (1045430272)
+2019-09-24 13:59:54,505 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 13:59:54,505 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 13:59:54,505 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 13:59:54,505 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 13:59:54,505 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 13:59:54,505 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 13:59:54,506 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 13:59:54,657 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 13:59:54,704 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 13:59:54,750 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 13:59:54,798 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 13:59:55,063 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:59:55,063 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 13:59:55,064 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:59:55,065 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:59:55,065 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 13:59:55,066 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:59:55,067 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:59:55,067 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 13:59:55,068 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:59:55,069 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:59:55,069 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 13:59:55,070 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:59:55,071 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 13:59:55,072 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 13:59:55,072 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:59:55,074 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 13:59:55,074 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 13:59:55,107 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 13:59:55,171 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 13:59:55,192 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 13:59:55,311 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 13:59:55,393 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 13:59:55,506 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 13:59:55,524 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 13:59:55,574 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 13:59:55,611 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 13:59:55,683 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 13:59:55,696 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 13:59:55,697 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 13:59:55,697 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 13:59:55,697 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 13:59:55,726 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 13:59:55,781 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 13:59:55,813 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 13:59:55,918 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 13:59:56,689 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 497mS.
+2019-09-24 13:59:56,691 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 13:59:56,852 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 13:59:56,857 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 13:59:56,929 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 13:59:56,930 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 13:59:57,023 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 13:59:57,024 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 13:59:57,666 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 976mS.
+2019-09-24 13:59:57,667 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2019-09-24 13:59:57,670 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:00:46,132 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 455594256 Bytes (1073741824)
+2019-09-24 14:01:19,149 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 782956576 Bytes (1073741824)
+2019-09-24 14:01:19,926 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 792910736 Bytes (1073741824)
+2019-09-24 14:01:20,037 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:01:20,037 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:01:20,037 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:01:20,037 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:01:20,037 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:01:20,037 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:01:20,039 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:01:20,162 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:01:20,277 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:01:20,318 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:01:20,429 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:01:20,637 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:20,637 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:01:20,638 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:20,639 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:20,640 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:01:20,640 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:20,641 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:20,641 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:01:20,642 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:20,643 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:20,643 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:01:20,644 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:20,645 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:20,645 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:01:20,646 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:20,647 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:01:20,648 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:20,674 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:01:20,738 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:01:20,756 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:01:20,809 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:01:20,837 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:01:20,943 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:01:20,959 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:01:21,003 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:01:21,030 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:01:21,108 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:01:21,117 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:01:21,117 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:01:21,118 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:01:21,118 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:01:21,144 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:01:21,202 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:01:21,230 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:01:21,330 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:01:21,726 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 129mS.
+2019-09-24 14:01:21,728 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:01:21,884 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:01:21,889 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:01:22,300 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:01:22,301 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:01:22,413 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:01:22,414 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:01:22,560 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 833mS.
+2019-09-24 14:01:22,561 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:01:22,571 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:01:34,324 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 661256608 Bytes (1073741824)
+2019-09-24 14:01:35,303 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 670693392 Bytes (1073741824)
+2019-09-24 14:01:35,430 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:01:35,430 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:01:35,430 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:01:35,430 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:01:35,430 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:01:35,430 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:01:35,431 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:01:35,627 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:01:35,672 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:01:35,714 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:01:35,761 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:01:35,942 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:35,943 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:01:35,943 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:35,944 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:35,944 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:01:35,945 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:35,946 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:35,946 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:01:35,947 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:35,948 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:35,948 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:01:35,949 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:35,950 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:35,950 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:01:35,950 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:35,952 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:01:35,952 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:35,978 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:01:36,060 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:01:36,117 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:01:36,178 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:01:36,212 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:01:36,315 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:01:36,334 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:01:36,380 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:01:36,408 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:01:36,482 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:01:36,491 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:01:36,492 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:01:36,492 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:01:36,492 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:01:36,518 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:01:36,576 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:01:36,603 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:01:36,712 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:01:37,206 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 136mS.
+2019-09-24 14:01:37,208 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:01:37,367 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:01:37,371 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:01:37,439 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:01:37,440 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:01:37,534 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:01:37,534 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:01:37,794 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 586mS.
+2019-09-24 14:01:37,795 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2019-09-24 14:01:37,797 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:01:43,463 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 525062352 Bytes (1073741824)
+2019-09-24 14:01:44,274 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 534759680 Bytes (1073741824)
+2019-09-24 14:01:44,385 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:01:44,385 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:01:44,385 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:01:44,385 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:01:44,385 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:01:44,385 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:01:44,386 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:01:44,580 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:01:44,628 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:01:44,728 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:01:44,777 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:01:44,951 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:44,951 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:01:44,952 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:44,953 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:44,953 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:01:44,953 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:44,954 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:44,955 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:01:44,955 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:44,956 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:44,957 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:01:44,957 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:44,958 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:01:44,959 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:01:44,959 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:44,960 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:01:44,960 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:01:44,985 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:01:45,049 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:01:45,069 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:01:45,124 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:01:45,170 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:01:45,342 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:01:45,386 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:01:45,431 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:01:45,458 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:01:45,531 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:01:45,539 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:01:45,539 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:01:45,540 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:01:45,540 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:01:45,563 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:01:45,616 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:01:45,643 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:01:45,743 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:01:46,159 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 143mS.
+2019-09-24 14:01:46,161 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:01:46,399 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:01:46,404 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:01:46,478 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:01:46,479 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:01:46,573 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:01:46,574 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:01:46,713 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 553mS.
+2019-09-24 14:01:46,714 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2019-09-24 14:01:46,718 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:04:57,715 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Clock Configuration
+2019-09-24 14:05:33,455 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Tab changed to: Pinout & Configuration
+2019-09-24 14:05:38,947 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 569018224 Bytes (1073741824)
+2019-09-24 14:05:39,916 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 577878856 Bytes (1073741824)
+2019-09-24 14:05:40,041 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:05:40,041 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:05:40,041 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:05:40,041 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:05:40,041 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:05:40,041 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:05:40,043 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:05:40,209 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:05:40,310 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:05:40,349 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:05:40,395 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:05:40,577 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:05:40,578 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:05:40,578 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:05:40,579 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:05:40,580 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:05:40,580 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:05:40,581 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:05:40,582 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:05:40,582 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:05:40,583 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:05:40,584 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:05:40,584 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:05:40,585 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:05:40,586 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:05:40,586 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:05:40,588 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:05:40,588 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:05:40,621 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:05:40,756 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:05:40,798 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:05:40,867 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:05:40,901 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:05:41,007 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:05:41,025 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:05:41,070 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:05:41,099 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:05:41,175 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:05:41,183 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:05:41,184 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:05:41,184 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:05:41,184 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:05:41,212 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:05:41,270 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:05:41,298 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:05:41,404 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:05:41,871 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 147mS.
+2019-09-24 14:05:41,873 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:05:42,030 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:05:42,130 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:05:42,203 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:05:42,204 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:05:42,399 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:05:42,399 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:05:42,627 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 754mS.
+2019-09-24 14:05:42,628 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:05:42,631 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:06:31,709 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 682927832 Bytes (1073741824)
+2019-09-24 14:06:32,480 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 691585504 Bytes (1073741824)
+2019-09-24 14:06:32,624 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:06:32,624 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:06:32,624 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:06:32,624 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:06:32,624 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:06:32,624 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:06:32,625 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:06:32,745 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:06:32,789 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:06:32,828 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:06:32,881 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:06:33,063 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:06:33,064 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:06:33,064 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:06:33,065 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:06:33,066 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:06:33,066 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:06:33,067 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:06:33,067 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:06:33,068 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:06:33,069 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:06:33,069 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:06:33,069 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:06:33,070 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:06:33,071 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:06:33,071 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:06:33,072 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:06:33,073 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:06:33,103 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:06:33,169 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:06:33,188 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:06:33,245 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:06:33,283 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:06:33,430 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:06:33,483 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:06:33,527 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:06:33,554 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:06:33,632 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:06:33,640 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:06:33,641 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:06:33,641 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:06:33,641 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:06:33,666 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:06:33,725 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:06:33,754 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:06:33,859 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:06:34,384 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 127mS.
+2019-09-24 14:06:34,386 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:06:34,543 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:06:34,547 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:06:34,618 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:06:34,619 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:06:34,708 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:06:34,709 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:06:34,787 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 402mS.
+2019-09-24 14:06:34,788 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 1mS.
+2019-09-24 14:06:34,794 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:07:50,333 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 395346696 Bytes (1073741824)
+2019-09-24 14:07:51,971 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 403689760 Bytes (1073741824)
+2019-09-24 14:07:52,076 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:07:52,076 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:07:52,076 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:07:52,076 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:07:52,076 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:07:52,076 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:07:52,077 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:07:52,205 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:07:52,254 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:07:52,296 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:07:52,343 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:07:52,526 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:07:52,527 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:07:52,528 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:07:52,529 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:07:52,529 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:07:52,529 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:07:52,530 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:07:52,531 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:07:52,532 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:07:52,533 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:07:52,533 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:07:52,533 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:07:52,534 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:07:52,535 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:07:52,535 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:07:52,536 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:07:52,537 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:07:52,562 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:07:52,626 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:07:52,644 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:07:52,697 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:07:52,724 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:07:52,827 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:07:52,844 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:07:52,889 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:07:52,919 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:07:53,003 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:07:53,012 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:07:53,012 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:07:53,013 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:07:53,013 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:07:53,089 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:07:53,181 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:07:53,221 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:07:53,333 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:07:53,852 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 156mS.
+2019-09-24 14:07:53,854 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:07:54,007 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:07:54,012 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:07:54,086 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:07:54,087 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:07:54,223 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:07:54,223 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:07:54,301 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 447mS.
+2019-09-24 14:07:54,302 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:07:54,310 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:09:51,892 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 487769472 Bytes (1073741824)
+2019-09-24 14:09:53,067 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 496684408 Bytes (1073741824)
+2019-09-24 14:09:53,177 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:09:53,177 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:09:53,177 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:09:53,177 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:09:53,177 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:09:53,177 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:09:53,178 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:09:53,297 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:09:53,342 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:09:53,382 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:09:53,429 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:09:53,614 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:09:53,615 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:09:53,616 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:09:53,617 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:09:53,618 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:09:53,618 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:09:53,619 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:09:53,620 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:09:53,620 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:09:53,621 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:09:53,622 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:09:53,622 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:09:53,624 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:09:53,625 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:09:53,625 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:09:53,626 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:09:53,627 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:09:53,686 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:09:53,779 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:09:53,827 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:09:53,881 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:09:53,908 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:09:54,016 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:09:54,034 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:09:54,081 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:09:54,109 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:09:54,183 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:09:54,191 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:09:54,191 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:09:54,192 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:09:54,192 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:09:54,219 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:09:54,278 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:09:54,305 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:09:54,478 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:09:54,884 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 138mS.
+2019-09-24 14:09:54,886 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:09:55,046 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:09:55,051 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:09:55,124 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:09:55,125 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:09:55,220 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:09:55,227 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:09:55,293 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 407mS.
+2019-09-24 14:09:55,304 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 11mS.
+2019-09-24 14:09:55,307 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:14:30,901 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 615502144 Bytes (1073741824)
+2019-09-24 14:14:31,824 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 624415032 Bytes (1073741824)
+2019-09-24 14:14:31,936 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: RTC
+2019-09-24 14:14:31,936 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: NVIC
+2019-09-24 14:14:31,936 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: SYS
+2019-09-24 14:14:31,936 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: USART
+2019-09-24 14:14:31,936 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: COMP
+2019-09-24 14:14:31,936 [INFO] BlockDiagram:1879 - set Specific Code input for plugin: TIM1_8L0
+2019-09-24 14:14:31,938 [INFO] CodeGenerator:572 - code generatio: config db path: C:\ST\STM32CubeIDE_1.0.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_1.0.0.201906050926\\db\
+2019-09-24 14:14:32,065 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp_save
+2019-09-24 14:14:32,116 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\license.tmp
+2019-09-24 14:14:32,162 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp_save
+2019-09-24 14:14:32,209 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\gpio.tmp
+2019-09-24 14:14:32,443 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:14:32,444 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for COMP
+2019-09-24 14:14:32,444 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:14:32,445 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:14:32,445 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for RTC
+2019-09-24 14:14:32,446 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:14:32,447 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:14:32,447 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2019-09-24 14:14:32,447 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:14:32,448 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:14:32,449 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for TIM
+2019-09-24 14:14:32,449 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:14:32,450 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line
+2019-09-24 14:14:32,451 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2019-09-24 14:14:32,451 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:14:32,452 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2019-09-24 14:14:32,452 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] Command line test
+2019-09-24 14:14:32,478 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c_save
+2019-09-24 14:14:32,548 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_it.c
+2019-09-24 14:14:32,567 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h_save
+2019-09-24 14:14:32,623 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_it.h
+2019-09-24 14:14:32,667 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c_save
+2019-09-24 14:14:32,816 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\stm32l0xx_hal_msp.c
+2019-09-24 14:14:32,836 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp_save
+2019-09-24 14:14:32,881 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\MXTmpFiles\system.tmp
+2019-09-24 14:14:32,914 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h_save
+2019-09-24 14:14:32,990 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\stm32l0xx_hal_conf.h
+2019-09-24 14:14:32,999 [WARN] IPConfigManager:2556 - IP not found : TIM
+2019-09-24 14:14:32,999 [WARN] IPConfigManager:2556 - IP not found : gpio
+2019-09-24 14:14:32,999 [WARN] CodeGenerator:2532 - IP not found : TIM
+2019-09-24 14:14:32,999 [WARN] CodeGenerator:2532 - IP not found : gpio
+2019-09-24 14:14:33,024 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h_save
+2019-09-24 14:14:33,080 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Inc\main.h
+2019-09-24 14:14:33,108 [INFO] CodeEngine:190 - oldGeneratedFile, C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c_save
+2019-09-24 14:14:33,215 [INFO] CodeEngine:208 - Generated code: C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\Src\main.c
+2019-09-24 14:14:33,628 [INFO] ProjectBuilder:1500 - Time for Copy HAL[1] : 137mS.
+2019-09-24 14:14:33,630 [INFO] ProjectBuilder:2068 - Project Generator version: 3.3.0
+2019-09-24 14:14:33,787 [INFO] ConfigFileManager:883 - The Die is : DIE425
+2019-09-24 14:14:33,792 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] configName ==Arm Cortex-M0+
+2019-09-24 14:14:33,868 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="RAM" access="xrw" start="0x20000000" size="8"
+2019-09-24 14:14:33,869 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] memory ==name="FLASH" access="rx" start="0x8000000" size="16"
+2019-09-24 14:14:33,963 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] namefile= STM32CubeIDE
+2019-09-24 14:14:33,963 [INFO] LogOutputStream:68 - [STDOUT_REDIRECT] method name===============update
+2019-09-24 14:14:34,650 [INFO] ProjectBuilder:2161 - Time for Generating toolchain IDE Files: 1020mS.
+2019-09-24 14:14:34,651 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
+2019-09-24 14:14:34,653 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.

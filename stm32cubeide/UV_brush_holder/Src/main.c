@@ -52,6 +52,18 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 
+uint8_t isSwitch = 0;
+uint8_t isRunning = 0;
+
+uint8_t clickcount = 0;
+uint8_t getcount = 0;
+uint8_t pastcount = 0;
+
+uint32_t nowtick = 0;
+uint32_t pasttick = 0;
+
+uint32_t nowledtick = 0;
+uint32_t pastledtick = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -108,27 +120,108 @@ int main(void)
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 
-  htim2.Instance->CCR1 = 500;
-  htim2.Instance->CCR2 = 500;
-  htim2.Instance->CCR3 = 500;
+  htim2.Instance->CCR1 = 0;
+  htim2.Instance->CCR2 = 0;
+  htim2.Instance->CCR3 = 0;
 
-  set_boost(OFF);
+
+  set_charging_led(OFF);
   set_uv_led(OFF);
+  set_boost(OFF);
+
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_Delay(1000);
-	  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
-	  set_boost(OFF);
-	  HAL_Delay(100);
-	  set_uv_led(OFF);
+	  //htim2.Instance->CCR2+=2;
+	  //htim2.Instance->CCR3+=10;
+
+	  nowledtick = HAL_GetTick();
+
+	  if(nowledtick - pastledtick > 5)
+	  {
+		  htim2.Instance->CCR1++;
+		  htim2.Instance->CCR2+=2;
+		  htim2.Instance->CCR3+=10;
+		  if(htim2.Instance->CCR1 > 9998)
+			  htim2.Instance->CCR1 = 0;
+		  if(htim2.Instance->CCR2 > 9998)
+			  htim2.Instance->CCR2 = 0;
+		  if(htim2.Instance->CCR3 > 9998)
+			  htim2.Instance->CCR3 = 0;
+		  pastledtick = nowledtick;
+	  }
+
+
+
+	  nowtick = HAL_GetTick();
+	  if(isSwitch)
+	  {
+		  if(nowtick - pasttick > 300)
+		  {
+
+			  clickcount++;
+			  isSwitch = 0;
+
+			  pasttick = nowtick;
+		  }
+	  }
+
+	  if(nowtick - pasttick > 500)		//500ms
+	  {
+		  getcount = clickcount;
+
+		  if(getcount == pastcount)
+		  {
+			  //end
+			  switch(getcount)
+			  {
+			  	  //task cases
+			  case 0:
+
+				  break;
+			  case 1:
+
+				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
+				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+				  break;
+			  case 2:
+
+				  break;
+			  case 3:
+				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
+				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
+				  break;
+			  }
+			  //reset
+			  isRunning = 0;
+			  clickcount = 0;
+			  isSwitch = 0;
+		  }
+		  if(getcount != pastcount)
+		  {
+			  //continue
+			  if(getcount > 3)
+			  {
+				  //reset
+				  isRunning = 0;
+				  clickcount = 0;
+				  isSwitch = 0;
+			  }
+		  }
+
+		  pastcount = getcount;
+		  pasttick = nowtick;
+	  }
+
   }
   /* USER CODE END 3 */
 }
@@ -269,11 +362,11 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 799;
+  htim2.Init.Prescaler = 7;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 1000;
+  htim2.Init.Period = 9999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
   {
     Error_Handler();
@@ -393,9 +486,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if(GPIO_Pin == SWITCH_Pin)
 	{
-		set_charging_led(ON);
-		set_boost(ON);
-		set_uv_led(ON);
+		isSwitch = 1;
 	}
 }
 /* USER CODE END 4 */
