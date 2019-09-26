@@ -13,6 +13,7 @@
 typedef enum{
 	OFF = 0,
 	ON = 1,
+	TOGGLE = 2,
 }typedefEnum;
 
 void set_uv_led(typedefEnum state)
@@ -21,10 +22,12 @@ void set_uv_led(typedefEnum state)
 	case OFF:
 	{
 		HAL_GPIO_WritePin(LED_UV_GPIO_Port, LED_UV_Pin, GPIO_PIN_RESET);
+		break;
 	}
 	case ON:
 	{
 		HAL_GPIO_WritePin(LED_UV_GPIO_Port, LED_UV_Pin, GPIO_PIN_SET);
+		break;
 	}}
 }
 void set_boost(typedefEnum state)
@@ -33,10 +36,12 @@ void set_boost(typedefEnum state)
 	case OFF:
 	{
 		HAL_GPIO_WritePin(BOOST_EN_GPIO_Port, BOOST_EN_Pin, GPIO_PIN_RESET);
+		break;
 	}
 	case ON:
 	{
 		HAL_GPIO_WritePin(BOOST_EN_GPIO_Port, BOOST_EN_Pin, GPIO_PIN_SET);
+		break;
 	}}
 }
 void set_charging_led(typedefEnum state)
@@ -45,11 +50,18 @@ void set_charging_led(typedefEnum state)
 	case OFF:
 	{
 		HAL_GPIO_WritePin(LED_CHARGE_GPIO_Port, LED_CHARGE_Pin, GPIO_PIN_RESET);
+		break;
 	}
 	case ON:
 	{
 		HAL_GPIO_WritePin(LED_CHARGE_GPIO_Port, LED_CHARGE_Pin, GPIO_PIN_SET);
-	}}
+		break;
+	}
+	case TOGGLE:
+	{
+		HAL_GPIO_TogglePin(LED_CHARGE_GPIO_Port, LED_CHARGE_Pin);
+	}
+	}
 }
 
 #endif /* BRUSH_H_ */

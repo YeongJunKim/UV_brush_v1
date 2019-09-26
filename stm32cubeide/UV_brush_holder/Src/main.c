@@ -28,7 +28,11 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+#define BAT_MIN 30
+#define BAT_MAX 90
 
+#define BAT_MIN_ADC 3367
+#define BAT_MAX_ADC 3895
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -42,18 +46,23 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-COMP_HandleTypeDef hcomp2;
+ADC_HandleTypeDef hadc;
 
 RTC_HandleTypeDef hrtc;
 
 TIM_HandleTypeDef htim2;
 
-UART_HandleTypeDef huart2;
-
 /* USER CODE BEGIN PV */
 
 uint8_t isSwitch = 0;
+uint8_t isCharging = 0;
 uint8_t isRunning = 0;
+uint8_t isLowBat = 0;
+
+uint8_t moodlighting = 0;
+uint8_t uvlighting = 0;
+
+uint8_t step = 0;
 
 uint8_t clickcount = 0;
 uint8_t getcount = 0;
@@ -64,15 +73,28 @@ uint32_t pasttick = 0;
 
 uint32_t nowledtick = 0;
 uint32_t pastledtick = 0;
+
+uint32_t nowadctick = 0;
+uint32_t pastadctick = 0;
+
+uint32_t nowbattick = 0;
+uint32_t pastbattick = 0;
+
+uint32_t nowsleeptick = 0;
+uint32_t pastsleeptick = 0;
+
+
+uint16_t adcValue = 0;
+float a = 0;
+uint8_t b = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM2_Init(void);
-static void MX_USART2_UART_Init(void);
-static void MX_COMP2_Init(void);
 static void MX_RTC_Init(void);
+static void MX_ADC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -112,18 +134,21 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
-  MX_USART2_UART_Init();
-  MX_COMP2_Init();
   MX_RTC_Init();
+  MX_ADC_Init();
   /* USER CODE BEGIN 2 */
+
+
+
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 
+  HAL_ADC_Start(&hadc);
+
   htim2.Instance->CCR1 = 0;
   htim2.Instance->CCR2 = 0;
   htim2.Instance->CCR3 = 0;
-
 
   set_charging_led(OFF);
   set_uv_led(OFF);
@@ -144,28 +169,136 @@ int main(void)
 	  //htim2.Instance->CCR2+=2;
 	  //htim2.Instance->CCR3+=10;
 
-	  nowledtick = HAL_GetTick();
+	  isCharging = HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin);
 
+
+	  if(!isCharging && b < 30)
+	  {
+		  //low battery.
+		  isLowBat = 1;
+	  }
+
+	  nowbattick = HAL_GetTick();
+	  if(nowbattick - pastbattick > 1000)
+	  {
+		  a = (float)(adcValue - 3368) * 0.1953;
+		  b = a;
+
+		  if(isCharging)
+		  {
+			  if(b < BAT_MIN)
+			  {
+				  set_charging_led(TOGGLE);
+			  }
+			  else if(b > BAT_MAX)
+			  {
+				  set_charging_led(OFF);
+			  }
+			  else
+			  {
+				  set_charging_led(ON);
+			  }
+		  }
+	  pastbattick = nowbattick;
+	  }
+
+
+	  /*
+	   * ADC conversion
+	   * every 100ms
+	   * */
+	  nowadctick = HAL_GetTick();
+	  if(nowadctick - pastadctick > 100)
+	  {
+		  //HAL_ADC_Start(&hadc);
+		  HAL_ADC_PollForConversion(&hadc, 0xFFFF);
+		  adcValue = HAL_ADC_GetValue(&hadc);
+
+		  pastadctick = nowadctick;
+	  }
+	  /*
+	   * LED testing
+	   * pwm control
+	   * */
+	  nowledtick = HAL_GetTick();
 	  if(nowledtick - pastledtick > 5)
 	  {
-		  htim2.Instance->CCR1++;
-		  htim2.Instance->CCR2+=2;
-		  htim2.Instance->CCR3+=10;
-		  if(htim2.Instance->CCR1 > 9998)
+		  if(uvlighting && moodlighting)
+		  {
+			  htim2.Instance->CCR1++;
+			  htim2.Instance->CCR2+=2;
+			  htim2.Instance->CCR3+=10;
+			  if(htim2.Instance->CCR1 > 9998)
+				  htim2.Instance->CCR1 = 0;
+			  if(htim2.Instance->CCR2 > 9998)
+				  htim2.Instance->CCR2 = 0;
+			  if(htim2.Instance->CCR3 > 9998)
+				  htim2.Instance->CCR3 = 0;
+		  }
+		  else if(!uvlighting && !moodlighting)
+		  {
 			  htim2.Instance->CCR1 = 0;
-		  if(htim2.Instance->CCR2 > 9998)
 			  htim2.Instance->CCR2 = 0;
-		  if(htim2.Instance->CCR3 > 9998)
 			  htim2.Instance->CCR3 = 0;
+			  htim2.Instance->CCR4 = 0;
+		  }
+		  else if(uvlighting && !moodlighting)
+		  {
+			  htim2.Instance->CCR1 = 0;
+			  htim2.Instance->CCR2 = 0;
+			  htim2.Instance->CCR3 = 9000;
+		  }
+		  else if(!uvlighting && moodlighting)
+		  {
+			  htim2.Instance->CCR1++;
+			  htim2.Instance->CCR2+=2;
+			  htim2.Instance->CCR3+=10;
+			  if(htim2.Instance->CCR1 > 9998)
+				  htim2.Instance->CCR1 = 0;
+			  if(htim2.Instance->CCR2 > 9998)
+				  htim2.Instance->CCR2 = 0;
+			  if(htim2.Instance->CCR3 > 9998)
+				  htim2.Instance->CCR3 = 0;
+		  }
+		  else
+		  {
+			  htim2.Instance->CCR1 = 0;
+			  htim2.Instance->CCR2 = 0;
+			  htim2.Instance->CCR3 = 0;
+			  htim2.Instance->CCR4 = 0;
+		  }
 		  pastledtick = nowledtick;
+	  }
+
+	  if(uvlighting)
+	  {
+		  set_boost(ON);
+		  set_uv_led(ON);
+	  }
+	  else
+	  {
+		  set_boost(OFF);
+		  set_uv_led(OFF);
 	  }
 
 
 
+	  /*
+	   * main task
+	   * switch control
+	   * double or triple click maximum waiting is 300ms.
+	   * if weighing time is over 500ms select task.
+	   * 1 click
+	   * UV LED lighting and few second later, shut down UV led power.
+	   * 2 clicks
+	   * 3color LED lighting & shut down UV led power.
+	   * 3 clicks
+	   * all shutdown. go to sleep mode.
+	   * */
 	  nowtick = HAL_GetTick();
 	  if(isSwitch)
 	  {
-		  if(nowtick - pasttick > 300)
+		  if(nowtick - pasttick > 800)
 		  {
 
 			  clickcount++;
@@ -174,54 +307,122 @@ int main(void)
 			  pasttick = nowtick;
 		  }
 	  }
-
-	  if(nowtick - pasttick > 500)		//500ms
+	  if(nowtick - pasttick > 1000)		//1sec
 	  {
 		  getcount = clickcount;
 
-		  if(getcount == pastcount)
-		  {
-			  //end
-			  switch(getcount)
-			  {
-			  	  //task cases
-			  case 0:
-
-				  break;
-			  case 1:
-
-				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
-				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
-				  break;
-			  case 2:
-
-				  break;
-			  case 3:
-				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);
-				  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_SET);
-				  break;
-			  }
-			  //reset
-			  isRunning = 0;
-			  clickcount = 0;
-			  isSwitch = 0;
-		  }
 		  if(getcount != pastcount)
 		  {
-			  //continue
-			  if(getcount > 3)
-			  {
-				  //reset
-				  isRunning = 0;
-				  clickcount = 0;
-				  isSwitch = 0;
-			  }
+			  step ++;
+			  //end
+
 		  }
+		  switch(step)
+		  {
+			  //task cases
+			  case 0:
+				  isRunning = 0;
+				  break;
+			  case 1:
+				  isRunning = 1;
+				  uvlighting = 1;
+				  moodlighting = 0;
+				  break;
+			  case 2:
+				  isRunning = 1;
+				  uvlighting = 0;
+				  moodlighting = 1;
+				  break;
+			  case 3:
+				  isRunning = 1;
+				  uvlighting = 0;
+				  moodlighting = 0;
+				  step = 0;
+				  break;
+			  default:
+				  isRunning = 0;
+				  uvlighting = 0;
+				  moodlighting = 0;
+				  step = 0;
+				  break;
+		  }
+		  //reset
+		  isSwitch = 0;
 
 		  pastcount = getcount;
 		  pasttick = nowtick;
 	  }
 
+	  nowsleeptick = HAL_GetTick();
+
+	  if(nowsleeptick - pastsleeptick > 10000)
+	  {
+		  //is running?
+		  if(isRunning || (!isRunning && isCharging))
+		  {
+			  //do nothing//
+		  }
+		  else
+		  {
+			  //enter sleep
+			  HAL_SuspendTick();
+			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+			  HAL_ResumeTick();
+		  }
+
+		  pastsleeptick = nowsleeptick;
+	  }
+
+
+
+//	  if(nowtick - pasttick > 800)		//500ms
+//	  {
+//		  getcount = clickcount;
+//
+//		  if(getcount == pastcount)
+//		  {
+//			  //end
+//			  switch(getcount)
+//			  {
+//			  	  //task cases
+//				  case 0:
+//					  break;
+//				  case 1:
+//					  uvlighting = 1;
+//					  break;
+//				  case 2:
+//					  uvlighting = 0;
+//					  moodlighting = 1;
+//					  break;
+//				  case 3:
+//					  uvlighting = 0;
+//					  moodlighting = 0;
+//					  break;
+//				  default:
+//					  uvlighting = 0;
+//					  moodlighting = 0;
+//					  break;
+//			  }
+//			  //reset
+//			  isRunning = 0;
+//			  clickcount = 0;
+//			  isSwitch = 0;
+//		  }
+//		  if(getcount != pastcount)
+//		  {
+//			  //continue
+//			  if(getcount > 3)
+//			  {
+//				  //reset
+//				  isRunning = 0;
+//				  clickcount = 0;
+//				  isSwitch = 0;
+//			  }
+//		  }
+//
+//		  pastcount = getcount;
+//		  pasttick = nowtick;
+//	  }
   }
   /* USER CODE END 3 */
 }
@@ -266,8 +467,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_RTC;
-  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
   PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
@@ -276,35 +476,56 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief COMP2 Initialization Function
+  * @brief ADC Initialization Function
   * @param None
   * @retval None
   */
-static void MX_COMP2_Init(void)
+static void MX_ADC_Init(void)
 {
 
-  /* USER CODE BEGIN COMP2_Init 0 */
+  /* USER CODE BEGIN ADC_Init 0 */
 
-  /* USER CODE END COMP2_Init 0 */
+  /* USER CODE END ADC_Init 0 */
 
-  /* USER CODE BEGIN COMP2_Init 1 */
+  ADC_ChannelConfTypeDef sConfig = {0};
 
-  /* USER CODE END COMP2_Init 1 */
-  hcomp2.Instance = COMP2;
-  hcomp2.Init.InvertingInput = COMP_INPUT_MINUS_1_2VREFINT;
-  hcomp2.Init.NonInvertingInput = COMP_INPUT_PLUS_IO1;
-  hcomp2.Init.LPTIMConnection = COMP_LPTIMCONNECTION_DISABLED;
-  hcomp2.Init.OutputPol = COMP_OUTPUTPOL_NONINVERTED;
-  hcomp2.Init.Mode = COMP_POWERMODE_MEDIUMSPEED;
-  hcomp2.Init.WindowMode = COMP_WINDOWMODE_DISABLE;
-  hcomp2.Init.TriggerMode = COMP_TRIGGERMODE_IT_RISING;
-  if (HAL_COMP_Init(&hcomp2) != HAL_OK)
+  /* USER CODE BEGIN ADC_Init 1 */
+
+  /* USER CODE END ADC_Init 1 */
+  /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
+  */
+  hadc.Instance = ADC1;
+  hadc.Init.OversamplingMode = DISABLE;
+  hadc.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc.Init.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
+  hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc.Init.ContinuousConvMode = ENABLE;
+  hadc.Init.DiscontinuousConvMode = DISABLE;
+  hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc.Init.DMAContinuousRequests = DISABLE;
+  hadc.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  hadc.Init.Overrun = ADC_OVR_DATA_PRESERVED;
+  hadc.Init.LowPowerAutoWait = DISABLE;
+  hadc.Init.LowPowerFrequencyMode = DISABLE;
+  hadc.Init.LowPowerAutoPowerOff = DISABLE;
+  if (HAL_ADC_Init(&hadc) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN COMP2_Init 2 */
+  /** Configure for the selected ADC regular channel to be converted. 
+  */
+  sConfig.Channel = ADC_CHANNEL_3;
+  sConfig.Rank = ADC_RANK_CHANNEL_NUMBER;
+  if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC_Init 2 */
 
-  /* USER CODE END COMP2_Init 2 */
+  /* USER CODE END ADC_Init 2 */
 
 }
 
@@ -401,41 +622,6 @@ static void MX_TIM2_Init(void)
 }
 
 /**
-  * @brief USART2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USART2_UART_Init(void)
-{
-
-  /* USER CODE BEGIN USART2_Init 0 */
-
-  /* USER CODE END USART2_Init 0 */
-
-  /* USER CODE BEGIN USART2_Init 1 */
-
-  /* USER CODE END USART2_Init 1 */
-  huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
-  huart2.Init.WordLength = UART_WORDLENGTH_8B;
-  huart2.Init.StopBits = UART_STOPBITS_1;
-  huart2.Init.Parity = UART_PARITY_NONE;
-  huart2.Init.Mode = UART_MODE_TX_RX;
-  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
-  huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  if (HAL_UART_Init(&huart2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART2_Init 2 */
-
-  /* USER CODE END USART2_Init 2 */
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -461,11 +647,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : SWITCH_Pin */
-  GPIO_InitStruct.Pin = SWITCH_Pin;
+  /*Configure GPIO pins : SWITCH_Pin CHARGE_Pin */
+  GPIO_InitStruct.Pin = SWITCH_Pin|CHARGE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(SWITCH_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LED_CHARGE_Pin */
   GPIO_InitStruct.Pin = LED_CHARGE_Pin;
@@ -488,7 +674,13 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	{
 		isSwitch = 1;
 	}
+	else if(GPIO_Pin == CHARGE_Pin)
+	{
+		isCharging = 1;
+	}
 }
+
+
 /* USER CODE END 4 */
 
 /**

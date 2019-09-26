@@ -3,6 +3,8 @@
 	<item key="LastUsedSourceTemplate" value="Default C++ source template"/>
 	<item key="LastUsedHeaderTemplate" value="Default C++ header template"/>
 	<section name="completion_proposal_size">
+		<item key="size.x" value="977"/>
+		<item key="size.y" value="252"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
