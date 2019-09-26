@@ -192,7 +192,6 @@ int main(void)
 	  }
 	  else
 	  {
-		  set_charging_led(OFF);
 		  isLowBat = 0;
 	  }
 
@@ -207,6 +206,10 @@ int main(void)
 			  if(b > BAT_MAX)
 			  {
 				  set_charging_led(OFF);
+			  }
+			  else if(b < BAT_MIN)
+			  {
+				  set_charging_led(TOGGLE);
 			  }
 			  else
 			  {

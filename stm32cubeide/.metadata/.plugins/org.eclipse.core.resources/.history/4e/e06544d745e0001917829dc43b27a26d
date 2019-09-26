@@ -173,27 +173,10 @@ int main(void)
 	  isCharging = HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin);
 
 
-	  if(!isCharging && b < 10)
+	  if(!isCharging && b < 30)
 	  {
 		  //low battery.
 		  isLowBat = 1;
-		  set_charging_led(TOGGLE);
-		  HAL_Delay(500);
-		  set_charging_led(TOGGLE);
-		  HAL_Delay(500);
-		  set_charging_led(TOGGLE);
-		  HAL_Delay(500);
-		  set_charging_led(TOGGLE);
-		  HAL_Delay(500);
-		  set_charging_led(TOGGLE);
-		  HAL_Delay(500);
-		  set_charging_led(TOGGLE);
-		  HAL_Delay(500);
-	  }
-	  else
-	  {
-		  set_charging_led(OFF);
-		  isLowBat = 0;
 	  }
 
 	  nowbattick = HAL_GetTick();
@@ -204,7 +187,15 @@ int main(void)
 
 		  if(isCharging)
 		  {
-			  if(b > BAT_MAX)
+			  if(b < BAT_MIN_LIMIT)
+			  {
+
+			  }
+			  if(b < BAT_MIN)
+			  {
+				  set_charging_led(TOGGLE);
+			  }
+			  else if(b > BAT_MAX)
 			  {
 				  set_charging_led(OFF);
 			  }
@@ -212,9 +203,6 @@ int main(void)
 			  {
 				  set_charging_led(ON);
 			  }
-		  }
-		  else
-		  {
 		  }
 	  pastbattick = nowbattick;
 	  }
@@ -369,21 +357,10 @@ int main(void)
 
 	  nowsleeptick = HAL_GetTick();
 
-	  if(nowsleeptick - pastsleeptick > 3000)
+	  if(nowsleeptick - pastsleeptick > 10000)
 	  {
-		  if(isLowBat)
-		  {
-			  isRunning = 0;
-			  uvlighting = 0;
-			  moodlighting = 0;
-			  step = 0;
-			  set_charging_led(OFF);
-			  HAL_SuspendTick();
-			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-			  HAL_ResumeTick();
-		  }
 		  //is running?
-		  else if(isRunning || (!isRunning && isCharging))
+		  if(isRunning || (!isRunning && isCharging))
 		  {
 			  //do nothing//
 		  }
@@ -391,7 +368,6 @@ int main(void)
 		  {
 			  //enter sleep
 			  HAL_SuspendTick();
-			  set_charging_led(OFF);
 			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 			  HAL_ResumeTick();
 		  }

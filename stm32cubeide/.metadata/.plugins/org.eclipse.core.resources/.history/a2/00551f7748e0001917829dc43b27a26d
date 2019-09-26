@@ -192,7 +192,6 @@ int main(void)
 	  }
 	  else
 	  {
-		  set_charging_led(OFF);
 		  isLowBat = 0;
 	  }
 
@@ -391,7 +390,6 @@ int main(void)
 		  {
 			  //enter sleep
 			  HAL_SuspendTick();
-			  set_charging_led(OFF);
 			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 			  HAL_ResumeTick();
 		  }

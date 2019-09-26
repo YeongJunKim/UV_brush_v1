@@ -3737,3 +3737,466 @@ Finished building: default.size.stdout
  
 Finished building: UV_brush_holder.list
  
+13:28:49 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16052	     12	   1820	  17884	   45dc	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+18:59:04 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12476	     12	   1812	  14300	   37dc	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+18:59:14 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16052	     12	   1820	  17884	   45dc	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+18:59:32 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16052	     12	   1820	  17884	   45dc	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+19:10:49 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16216	     12	   1820	  18048	   4680	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:15:09 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16256	     12	   1820	  18088	   46a8	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:16:02 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16264	     12	   1820	  18096	   46b0	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:17:58 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16248	     12	   1820	  18080	   46a0	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:19:13 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16236	     12	   1820	  18068	   4694	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:19:38 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16236	     12	   1820	  18068	   4694	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+19:20:53 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16236	     12	   1820	  18068	   4694	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:22:59 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16204	     12	   1820	  18036	   4674	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:23:25 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16204	     12	   1820	  18036	   4674	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:23:35 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16228	     12	   1820	  18060	   468c	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:23:48 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16228	     12	   1820	  18060	   468c	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+19:25:19 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16260	     12	   1820	  18092	   46ac	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:26:05 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16260	     12	   1820	  18092	   46ac	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:27:11 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16260	     12	   1820	  18092	   46ac	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+19:29:05 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16268	     12	   1820	  18100	   46b4	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:29:09 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16268	     12	   1820	  18100	   46b4	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+19:29:18 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16268	     12	   1820	  18100	   46b4	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+19:29:50 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16284	     12	   1820	  18116	   46c4	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+19:30:06 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16268	     12	   1820	  18100	   46b4	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+20:39:02 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:26:0:
+../Src/brush.h: In function 'set_uv_led':
+../Src/brush.h:21:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+../Src/brush.h: In function 'set_boost':
+../Src/brush.h:35:2: warning: enumeration value 'TOGGLE' not handled in switch [-Wswitch]
+  switch(state){
+  ^~~~~~
+arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: UV_brush_holder.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder.elf  > "UV_brush_holder.list"
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16276	     12	   1820	  18108	   46bc	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder.list
+ 
+20:39:23 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j4 all 
+arm-none-eabi-size   UV_brush_holder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16276	     12	   1820	  18108	   46bc	UV_brush_holder.elf
+Finished building: default.size.stdout
+ 

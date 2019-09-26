@@ -173,7 +173,7 @@ int main(void)
 	  isCharging = HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin);
 
 
-	  if(!isCharging && b < 10)
+	  if(!isCharging && b < 50)
 	  {
 		  //low battery.
 		  isLowBat = 1;
@@ -192,7 +192,6 @@ int main(void)
 	  }
 	  else
 	  {
-		  set_charging_led(OFF);
 		  isLowBat = 0;
 	  }
 
@@ -369,8 +368,8 @@ int main(void)
 
 	  nowsleeptick = HAL_GetTick();
 
-	  if(nowsleeptick - pastsleeptick > 3000)
-	  {
+//	  if(nowsleeptick - pastsleeptick > 10000)
+//	  {
 		  if(isLowBat)
 		  {
 			  isRunning = 0;
@@ -391,13 +390,12 @@ int main(void)
 		  {
 			  //enter sleep
 			  HAL_SuspendTick();
-			  set_charging_led(OFF);
 			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 			  HAL_ResumeTick();
 		  }
 
-		  pastsleeptick = nowsleeptick;
-	  }
+//		  pastsleeptick = nowsleeptick;
+//	  }
 
   }
   /* USER CODE END 3 */

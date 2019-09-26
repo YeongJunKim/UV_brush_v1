@@ -173,7 +173,7 @@ int main(void)
 	  isCharging = HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin);
 
 
-	  if(!isCharging && b < 10)
+	  if(!isCharging && b < 50)
 	  {
 		  //low battery.
 		  isLowBat = 1;
@@ -192,7 +192,6 @@ int main(void)
 	  }
 	  else
 	  {
-		  set_charging_led(OFF);
 		  isLowBat = 0;
 	  }
 
@@ -391,7 +390,6 @@ int main(void)
 		  {
 			  //enter sleep
 			  HAL_SuspendTick();
-			  set_charging_led(OFF);
 			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 			  HAL_ResumeTick();
 		  }
