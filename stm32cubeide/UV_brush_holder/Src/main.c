@@ -192,7 +192,6 @@ int main(void)
 	  }
 	  else
 	  {
-		  set_charging_led(OFF);
 		  isLowBat = 0;
 	  }
 
@@ -369,7 +368,7 @@ int main(void)
 
 	  nowsleeptick = HAL_GetTick();
 
-	  if(nowsleeptick - pastsleeptick > 3000)
+	  if(nowsleeptick - pastsleeptick > 5000)
 	  {
 		  if(isLowBat)
 		  {
@@ -378,6 +377,8 @@ int main(void)
 			  moodlighting = 0;
 			  step = 0;
 			  set_charging_led(OFF);
+			  set_uv_led(OFF);
+			  set_boost(OFF);
 			  HAL_SuspendTick();
 			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 			  HAL_ResumeTick();
@@ -390,8 +391,10 @@ int main(void)
 		  else
 		  {
 			  //enter sleep
-			  HAL_SuspendTick();
 			  set_charging_led(OFF);
+			  set_uv_led(OFF);
+			  set_boost(OFF);
+			  HAL_SuspendTick();
 			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
 			  HAL_ResumeTick();
 		  }
