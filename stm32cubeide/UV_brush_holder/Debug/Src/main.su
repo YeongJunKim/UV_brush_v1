@@ -2,10 +2,10 @@ brush.h:19:6:set_uv_led	16	static
 brush.h:33:6:set_boost	16	static
 brush.h:47:6:set_charging_led	16	static
 main.c:112:5:main	16	static
-main.c:413:6:SystemClock_Config	112	static
-main.c:462:13:MX_ADC_Init	16	static
-main.c:516:13:MX_RTC_Init	8	static
-main.c:551:13:MX_TIM2_Init	32	static
-main.c:608:13:MX_GPIO_Init	48	static
-main.c:650:6:HAL_GPIO_EXTI_Callback	16	static
-main.c:669:6:Error_Handler	8	static
+main.c:430:6:SystemClock_Config	88	static
+main.c:472:13:MX_ADC_Init	16	static
+main.c:526:13:MX_IWDG_Init	8	static
+main.c:555:13:MX_TIM2_Init	32	static
+main.c:612:13:MX_GPIO_Init	48	static
+main.c:654:6:HAL_GPIO_EXTI_Callback	16	static
+main.c:673:6:Error_Handler	8	static

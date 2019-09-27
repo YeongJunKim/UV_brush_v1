@@ -2812,3 +2812,7 @@
 2019-09-26 12:57:48,858 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
 2019-09-26 12:57:48,860 [INFO] ProjectBuilder:1391 - Time for Copy CMSIS : 0mS.
 2019-09-26 13:07:44,144 [INFO] NvicTabbedPanel:197 - Cannot restore the selected Tab for NVIC
+2019-09-27 10:14:09,241 [INFO] Activator:176 - 
+
+
+2019-09-27 10:14:09,245 [INFO] Activator:177 - !SESSION log4j initialized

@@ -49,7 +49,7 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc;
 
-RTC_HandleTypeDef hrtc;
+IWDG_HandleTypeDef hiwdg;
 
 TIM_HandleTypeDef htim2;
 
@@ -94,8 +94,8 @@ uint8_t b = 0;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM2_Init(void);
-static void MX_RTC_Init(void);
 static void MX_ADC_Init(void);
+static void MX_IWDG_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -135,9 +135,23 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
-  MX_RTC_Init();
   MX_ADC_Init();
+  MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
+
+  /*
+   * if IWDG ?
+   * */
+  if(__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST) == SET)
+  {
+	  set_charging_led(ON);
+	  __HAL_RCC_CLEAR_RESET_FLAGS();
+  }
+  else
+  {
+	  set_charging_led(OFF);
+  }
+  HAL_Delay(1000);
 
 
 
@@ -167,8 +181,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //htim2.Instance->CCR2+=2;
-	  //htim2.Instance->CCR3+=10;
+
+	  /*
+	   * IWDG refreshing
+	   * */
+	  HAL_IWDG_Refresh(&hiwdg);
 
 	  isCharging = HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin);
 
@@ -414,7 +431,6 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Configure the main internal regulator output voltage 
   */
@@ -443,12 +459,6 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
-  PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
-  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
@@ -509,37 +519,31 @@ static void MX_ADC_Init(void)
 }
 
 /**
-  * @brief RTC Initialization Function
+  * @brief IWDG Initialization Function
   * @param None
   * @retval None
   */
-static void MX_RTC_Init(void)
+static void MX_IWDG_Init(void)
 {
 
-  /* USER CODE BEGIN RTC_Init 0 */
+  /* USER CODE BEGIN IWDG_Init 0 */
 
-  /* USER CODE END RTC_Init 0 */
+  /* USER CODE END IWDG_Init 0 */
 
-  /* USER CODE BEGIN RTC_Init 1 */
+  /* USER CODE BEGIN IWDG_Init 1 */
 
-  /* USER CODE END RTC_Init 1 */
-  /** Initialize RTC Only 
-  */
-  hrtc.Instance = RTC;
-  hrtc.Init.HourFormat = RTC_HOURFORMAT_24;
-  hrtc.Init.AsynchPrediv = 127;
-  hrtc.Init.SynchPrediv = 255;
-  hrtc.Init.OutPut = RTC_OUTPUT_DISABLE;
-  hrtc.Init.OutPutRemap = RTC_OUTPUT_REMAP_NONE;
-  hrtc.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
-  hrtc.Init.OutPutType = RTC_OUTPUT_TYPE_OPENDRAIN;
-  if (HAL_RTC_Init(&hrtc) != HAL_OK)
+  /* USER CODE END IWDG_Init 1 */
+  hiwdg.Instance = IWDG;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_128;
+  hiwdg.Init.Window = 4095;
+  hiwdg.Init.Reload = 4095;
+  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN RTC_Init 2 */
+  /* USER CODE BEGIN IWDG_Init 2 */
 
-  /* USER CODE END RTC_Init 2 */
+  /* USER CODE END IWDG_Init 2 */
 
 }
 
