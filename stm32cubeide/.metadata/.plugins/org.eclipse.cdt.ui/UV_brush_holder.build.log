@@ -1,10 +1,10 @@
-11:05:04 **** Incremental Build of configuration Debug for project UV_brush_holder ****
-make -j4 all 
+10:30:21 **** Incremental Build of configuration Debug for project UV_brush_holder ****
+make -j6 all 
 arm-none-eabi-size   UV_brush_holder.elf 
    text	   data	    bss	    dec	    hex	filename
   15352	     12	   1804	  17168	   4310	UV_brush_holder.elf
 Finished building: default.size.stdout
  
 
-11:05:05 Build Finished. 0 errors, 0 warnings. (took 1s.237ms)
+10:30:22 Build Finished. 0 errors, 0 warnings. (took 1s.236ms)
 

@@ -1,0 +1,17 @@
+10:30:49 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14320	     12	   1788	  16120	   3ef8	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+
+10:30:50 Build Finished. 0 errors, 0 warnings. (took 1s.932ms)
+
