@@ -4,10 +4,10 @@ brush.h:51:6:set_neopixel_led	16	static
 brush.h:67:6:set_neopixel_boost	16	static
 brush.h:83:6:set_charging_led	16	static
 main.c:116:5:main	24	static
-main.c:295:6:SystemClock_Config	88	static
-main.c:337:13:MX_ADC_Init	16	static
-main.c:391:13:MX_IWDG_Init	8	static
-main.c:420:13:MX_TIM2_Init	32	static
-main.c:469:13:MX_GPIO_Init	48	static
-main.c:510:6:HAL_GPIO_EXTI_Callback	16	static
-main.c:527:6:Error_Handler	8	static
+main.c:333:6:SystemClock_Config	88	static
+main.c:375:13:MX_ADC_Init	16	static
+main.c:429:13:MX_IWDG_Init	8	static
+main.c:458:13:MX_TIM2_Init	32	static
+main.c:507:13:MX_GPIO_Init	48	static
+main.c:548:6:HAL_GPIO_EXTI_Callback	16	static
+main.c:565:6:Error_Handler	8	static

@@ -45,7 +45,7 @@
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
+/* USER CODE BEGIN PM *
 
 /* USER CODE END PM */
 
@@ -219,6 +219,13 @@ int main(void)
 	  }
 
 
+	  nowLedTick = HAL_GetTick();
+	  if(nowLedTick > 50)
+	  {
+		  //add dmad
+		  pastLedTick = nowLedTick;
+	  }
+
 
 
 	  nowTick = HAL_GetTick();
@@ -241,12 +248,26 @@ int main(void)
 		  switch(step)
 		  {
 		  case 1:
+			  isRunning = 1;
+			  isMoodLighting = 0;
+			  isUVLighting = 1;
 			  break;
 		  case 2:
+			  isRunning = 1;
+			  isMoodLighting = 1;
+			  isUVLighting = 0;
 			  break;
 		  case 3:
+			  isRunning = 0;
+			  isMoodLighting = 0;
+			  isUVLighting = 0;
+			  step = 0;
 			  break;
 		  default:
+			  isRunning = 0;
+			  isMoodLighting = 0;
+			  isUVLighting = 0;
+			  step = 0;
 			  break;
 		  }
 		  isSwitch = 0;
@@ -262,6 +283,14 @@ int main(void)
 		  if(isLowBat)
 		  {
 			  //goToSleep;
+			  set_charging_led(OFF);
+			  set_neopixel_boost(OFF);
+			  set_neopixel_led(OFF);
+			  set_uv_boost(OFF);
+			  set_uv_led(OFF);
+			  HAL_SuspendTick();
+			  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+			  HAL_ResumeTick();
 		  }
 		  else
 		  {
@@ -278,9 +307,18 @@ int main(void)
 				  else
 				  {
 					  //goToSleep;
+					  set_charging_led(OFF);
+					  set_neopixel_boost(OFF);
+					  set_neopixel_led(OFF);
+					  set_uv_boost(OFF);
+					  set_uv_led(OFF);
+					  HAL_SuspendTick();
+					  HAL_PWR_EnterSLEEPMode(PWR_LOWPOWERREGULATOR_ON, PWR_SLEEPENTRY_WFI);
+					  HAL_ResumeTick();
 				  }
 			  }
 		  }
+		  pastSleepTick = nowSleepTick;
 	  }
 
 
