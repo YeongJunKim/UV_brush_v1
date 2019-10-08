@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "brush.h"
+#include "neopixel.h"
 
 
 #define BAT_MIN_LIMIT 10
@@ -45,7 +46,7 @@
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM *
+/* USER CODE BEGIN PM */
 
 /* USER CODE END PM */
 
@@ -55,6 +56,9 @@ ADC_HandleTypeDef hadc;
 IWDG_HandleTypeDef hiwdg;
 
 TIM_HandleTypeDef htim2;
+DMA_HandleTypeDef hdma_tim2_ch2;
+DMA_HandleTypeDef hdma_tim2_ch1;
+DMA_HandleTypeDef hdma_tim2_ch3;
 
 /* USER CODE BEGIN PV */
 
@@ -97,6 +101,7 @@ uint16_t adc_B = 0;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_ADC_Init(void);
 static void MX_IWDG_Init(void);
@@ -138,6 +143,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM2_Init();
   MX_ADC_Init();
   MX_IWDG_Init();
@@ -170,6 +176,9 @@ int main(void)
   set_neopixel_boost(OFF);
   set_uv_boost(OFF);
 
+
+  neopixel_begin(1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -179,6 +188,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+
+
+
 	  HAL_IWDG_Refresh(&hiwdg);
 	  isCharging = HAL_GPIO_ReadPin(CHARGE_GPIO_Port, CHARGE_Pin);
 
@@ -190,11 +203,11 @@ int main(void)
 	  nowBatTick = HAL_GetTick();
 	  if(nowBatTick - pastBatTick > 100)
 	  {
-		  HAL_ADC_PollForConversion(&hadc, 0xFFFF);
-		  adcValue = HAL_ADC_GetValue(&hadc);
-		  adc_A = (float)(adcValue - 3368) * 0.1953;
-		  adc_B = adc_A;
-		  pastBatTick = nowBatTick;
+//		  HAL_ADC_PollForConversion(&hadc, 0xFFFF);
+//		  adcValue = HAL_ADC_GetValue(&hadc);
+//		  adc_A = (float)(adcValue - 3368) * 0.1953;
+//		  adc_B = adc_A;
+//		  pastBatTick = nowBatTick;
 	  }
 	  if(isCharging)
 	  {
@@ -219,15 +232,18 @@ int main(void)
 	  }
 
 
+	  set_neopixel_boost(ON);
+	  set_neopixel_led(ON);
 	  nowLedTick = HAL_GetTick();
 	  if(nowLedTick > 50)
 	  {
 		  //add dmad
+		  neopixel_SetColor(1, 255, 100, 10, 50);
 		  pastLedTick = nowLedTick;
 	  }
 
 
-
+/*
 	  nowTick = HAL_GetTick();
 	  if(isSwitch)
 	  {
@@ -321,7 +337,7 @@ int main(void)
 		  pastSleepTick = nowSleepTick;
 	  }
 
-
+*/
   }
   /* USER CODE END 3 */
 }
@@ -462,6 +478,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 0 */
 
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
 
@@ -469,11 +486,20 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 7;
+  htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 9999;
+  htim2.Init.Period = 10;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
   {
     Error_Handler();
@@ -492,10 +518,39 @@ static void MX_TIM2_Init(void)
   {
     Error_Handler();
   }
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
   HAL_TIM_MspPostInit(&htim2);
+
+}
+
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
+  /* DMA1_Channel4_5_6_7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_5_6_7_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_5_6_7_IRQn);
 
 }
 

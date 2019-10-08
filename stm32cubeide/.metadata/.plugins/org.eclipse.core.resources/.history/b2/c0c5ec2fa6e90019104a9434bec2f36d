@@ -1,0 +1,36 @@
+/*
+ * neopixel.h
+ *
+ *  Created on: Oct 8, 2019
+ *      Author: colson
+ */
+
+#ifndef NEOPIXEL_H_
+#define NEOPIXEL_H_
+
+#include "main.h"
+
+typedef bool int;
+
+#define BIT_PERIOD 	10
+#define BIT_HIGH	6
+#define BIT_LOW		3
+
+
+
+uint8_t neopixel_init(void)
+{
+
+}
+
+void neopixel_begin(uint32_t led_cnt)
+{
+
+}
+void neopixel_SetColor(uint32_t index, uint8_t red, uint8_t green, uint8_t blue, uint8_t white)
+{
+
+}
+
+
+#endif /* NEOPIXEL_H_ */

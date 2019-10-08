@@ -52,8 +52,8 @@ UV_brush_holder.list \
 all: UV_brush_holder.elf secondary-outputs
 
 # Tool invocations
-UV_brush_holder.elf: $(OBJS) $(USER_OBJS) C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld
-	arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+UV_brush_holder.elf: $(OBJS) $(USER_OBJS) C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld
+	arm-none-eabi-g++ -o "UV_brush_holder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/dud37/Desktop/workspace/UV_brush_v1/stm32cubeide/UV_brush_holder_v2/Inc
+HeaderPath=C:/Users/colson/Desktop/workspace/UV_brush_v1/stm32cubeide/UV_brush_holder_v2/Inc
 HeaderFiles=stm32l0xx_it.h;stm32l0xx_hal_conf.h;main.h;
-SourcePath=C:/Users/dud37/Desktop/workspace/UV_brush_v1/stm32cubeide/UV_brush_holder_v2/Src
+SourcePath=C:/Users/colson/Desktop/workspace/UV_brush_v1/stm32cubeide/UV_brush_holder_v2/Src
 SourceFiles=stm32l0xx_it.c;stm32l0xx_hal_msp.c;main.c;
 
 [PreviousLibFiles]

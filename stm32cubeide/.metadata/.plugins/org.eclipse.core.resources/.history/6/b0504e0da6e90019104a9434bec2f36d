@@ -1,0 +1,15 @@
+/*
+ * neopixel.h
+ *
+ *  Created on: Oct 8, 2019
+ *      Author: colson
+ */
+
+#ifndef NEOPIXEL_H_
+#define NEOPIXEL_H_
+
+#include "main.h"
+
+
+
+#endif /* NEOPIXEL_H_ */

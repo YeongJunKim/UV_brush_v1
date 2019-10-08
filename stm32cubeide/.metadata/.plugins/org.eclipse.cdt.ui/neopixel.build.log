@@ -1,0 +1,17 @@
+22:20:02 **** Incremental Build of configuration Debug for project neopixel ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "neopixel.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\neopixel\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="neopixel.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: neopixel.elf
+ 
+arm-none-eabi-objdump -h -S  neopixel.elf  > "neopixel.list"
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+Finished building: neopixel.list
+ 
+
+22:20:04 Build Finished. 0 errors, 0 warnings. (took 2s.218ms)
+
