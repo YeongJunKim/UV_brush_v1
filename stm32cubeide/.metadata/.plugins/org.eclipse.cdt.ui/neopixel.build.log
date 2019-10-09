@@ -1,10 +1,10 @@
-12:05:57 **** Incremental Build of configuration Debug for project neopixel ****
-make -j6 all 
+05:37:48 **** Incremental Build of configuration Debug for project neopixel ****
+make -j4 all 
 arm-none-eabi-size   neopixel.elf 
    text	   data	    bss	    dec	    hex	filename
   10964	     12	   1948	  12924	   327c	neopixel.elf
 Finished building: default.size.stdout
  
 
-12:05:58 Build Finished. 0 errors, 0 warnings. (took 1s.276ms)
+05:37:49 Build Finished. 0 errors, 0 warnings. (took 1s.328ms)
 

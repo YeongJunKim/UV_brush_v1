@@ -10,15 +10,26 @@
 
 #include "main.h"
 #include "stdlib.h"
+
+#define NEOPIXEL_MINI
+#ifdef NEOPIXEL_MINI
+
+#else
+#define NEOPIXEL_6061
+#endif
+
 #define BIT_PERIOD 	40
 #define BIT_HIGH	11
-#define BIT_LOW		30\
+#define BIT_LOW		30
 
 uint8_t is_init = 0;
 uint16_t led_cnt = 0;
 
+#ifdef NEOPIXEL_6061
 uint8_t led_buf[70+32];
-
+#else
+uint8_t led_buf[70+24];
+#endif
 extern TIM_HandleTypeDef htim2;
 
 void neopixel_init(int cnt)
@@ -41,6 +52,8 @@ void neopixel_SetColor(uint32_t cnt, uint8_t red, uint8_t green, uint8_t blue, u
 	uint32_t cnt_ = cnt - 1;
 	for(int i = 0; i < 8; i ++)
 	{
+
+#ifdef NEOPIXEL_6061
 		uint16_t index_red 		= 69+32*cnt_+8-i;
 		uint16_t index_green 	= 69+32*cnt_+16-i;
 		uint16_t index_blue 	= 69+32*cnt_+24-i;
@@ -61,6 +74,24 @@ void neopixel_SetColor(uint32_t cnt, uint8_t red, uint8_t green, uint8_t blue, u
 			led_buf[index_white] = BIT_HIGH;
 		else
 			led_buf[index_white] = BIT_LOW;
+#else
+		uint16_t index_green 		= 69+24*cnt_+8-i;
+		uint16_t index_red 			= 69+24*cnt_+16-i;
+		uint16_t index_blue 		= 69+24*cnt_+24-i;
+		if(green >> i & 0x01)
+			led_buf[index_red] = BIT_HIGH;
+		else
+			led_buf[index_red] = BIT_LOW;
+		if(red >> i & 0x01)
+			led_buf[index_green] = BIT_HIGH;
+		else
+			led_buf[index_green] = BIT_LOW;
+		if(blue >> i & 0x01)
+			led_buf[index_blue] = BIT_HIGH;
+		else
+			led_buf[index_blue] = BIT_LOW;
+#endif
+
 	}
 }
 

@@ -37,8 +37,8 @@ neopixel.list \
 all: neopixel.elf secondary-outputs
 
 # Tool invocations
-neopixel.elf: $(OBJS) $(USER_OBJS) C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\neopixel\STM32L031F4PX_FLASH.ld
-	arm-none-eabi-gcc -o "neopixel.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\neopixel\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="neopixel.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+neopixel.elf: $(OBJS) $(USER_OBJS) C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\neopixel\STM32L031F4PX_FLASH.ld
+	arm-none-eabi-gcc -o "neopixel.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\neopixel\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="neopixel.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

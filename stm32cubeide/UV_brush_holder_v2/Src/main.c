@@ -252,7 +252,9 @@ int main(void)
 		  {
 			  set_neopixel_boost(ON);
 			  set_neopixel_led(ON);
-			  neopixel_SetColor(1, 0, 0, 255, 0);
+			  neopixel_pause();
+			  neopixel_SetColor(1, 0, 0, 255, white_++);
+			  neopixel_begin();
 		  }
 		  else
 		  {
