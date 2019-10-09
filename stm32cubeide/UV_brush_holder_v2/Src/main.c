@@ -57,8 +57,6 @@ IWDG_HandleTypeDef hiwdg;
 
 TIM_HandleTypeDef htim2;
 DMA_HandleTypeDef hdma_tim2_ch2;
-DMA_HandleTypeDef hdma_tim2_ch1;
-DMA_HandleTypeDef hdma_tim2_ch3;
 
 /* USER CODE BEGIN PV */
 
@@ -92,9 +90,17 @@ uint32_t pastBatTick = 0;
 uint32_t nowSleepTick = 0;
 uint32_t pastSleepTick = 0;
 
+uint32_t nowUvCountTick = 0;
+uint32_t pastUvCountTick = 0;
+
 uint16_t adcValue = 0;
 float adc_A = 0;
 uint16_t adc_B = 0;
+
+uint8_t red_ = 0;
+uint8_t green_ = 50;
+uint8_t blue_ = 200;
+uint8_t white_ = 10;
 
 /* USER CODE END PV */
 
@@ -177,8 +183,8 @@ int main(void)
   set_uv_boost(OFF);
 
 
-  neopixel_begin(1);
-
+  neopixel_init(1);
+  neopixel_begin();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -203,15 +209,15 @@ int main(void)
 	  nowBatTick = HAL_GetTick();
 	  if(nowBatTick - pastBatTick > 100)
 	  {
-//		  HAL_ADC_PollForConversion(&hadc, 0xFFFF);
-//		  adcValue = HAL_ADC_GetValue(&hadc);
+		  HAL_ADC_PollForConversion(&hadc, 0xFFFF);
+		  adcValue = HAL_ADC_GetValue(&hadc);
 //		  adc_A = (float)(adcValue - 3368) * 0.1953;
 //		  adc_B = adc_A;
-//		  pastBatTick = nowBatTick;
+		  pastBatTick = nowBatTick;
 	  }
 	  if(isCharging)
 	  {
-		  if(adc_B > BAT_MAX)
+		  if(adcValue > BAT_MAX_ADC)
 			  set_charging_led(OFF);
 		  else
 			  set_charging_led(ON);
@@ -220,7 +226,7 @@ int main(void)
 	  }
 	  else
 	  {
-		  if(adc_B < BAT_MIN)
+		  if(adcValue < BAT_MIN_ADC)
 		  {
 			  for(uint8_t i = 0; i < 6; i ++)
 			  {
@@ -231,19 +237,47 @@ int main(void)
 		  }
 	  }
 
-
-	  set_neopixel_boost(ON);
-	  set_neopixel_led(ON);
 	  nowLedTick = HAL_GetTick();
-	  if(nowLedTick > 50)
+	  if(nowLedTick - pastLedTick > 300)
 	  {
-		  //add dmad
-		  neopixel_SetColor(1, 255, 100, 10, 50);
+		  if(isMoodLighting)
+		  {
+			  set_neopixel_boost(ON);
+			  set_neopixel_led(ON);
+			  neopixel_pause();
+			  neopixel_SetColor(1, red_++, green_++, blue_++, white_++);
+			  neopixel_begin();
+		  }
+		  else if(isUVLighting)
+		  {
+			  set_neopixel_boost(ON);
+			  set_neopixel_led(ON);
+			  neopixel_SetColor(1, 0, 0, 255, 0);
+		  }
+		  else
+		  {
+			  set_neopixel_boost(OFF);
+			  set_neopixel_led(OFF);
+			  neopixel_SetColor(1, 0, 0, 0, 0);
+		  }
+
+		  if(isUVLighting)
+		  {
+			  set_uv_boost(ON);
+			  set_uv_led(ON);
+		  }
+		  else
+		  {
+			  set_uv_boost(OFF);
+			  set_uv_led(OFF);
+		  }
+
+
 		  pastLedTick = nowLedTick;
 	  }
 
 
-/*
+
 	  nowTick = HAL_GetTick();
 	  if(isSwitch)
 	  {
@@ -264,9 +298,26 @@ int main(void)
 		  switch(step)
 		  {
 		  case 1:
+			  if(!isUVLighting)
+			  {
+				  nowUvCountTick = HAL_GetTick();
+				  pastUvCountTick = nowUvCountTick;
+			  }
+			  else
+			  {
+				  nowUvCountTick = HAL_GetTick();
+			  }
 			  isRunning = 1;
 			  isMoodLighting = 0;
 			  isUVLighting = 1;
+			  /*
+			   * count timing
+			   * */
+
+			  if(nowUvCountTick - pastUvCountTick > 8000)
+			  {
+				  step = 3;
+			  }
 			  break;
 		  case 2:
 			  isRunning = 1;
@@ -337,7 +388,7 @@ int main(void)
 		  pastSleepTick = nowSleepTick;
 	  }
 
-*/
+
   }
   /* USER CODE END 3 */
 }
@@ -362,8 +413,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_3;
-  RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_3;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_4;
+  RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -373,11 +424,11 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -488,7 +539,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 10;
+  htim2.Init.Period = 39;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -514,15 +565,7 @@ static void MX_TIM2_Init(void)
   sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
   }
@@ -542,15 +585,9 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
-  /* DMA1_Channel1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
   /* DMA1_Channel2_3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
-  /* DMA1_Channel4_5_6_7_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel4_5_6_7_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Channel4_5_6_7_IRQn);
 
 }
 

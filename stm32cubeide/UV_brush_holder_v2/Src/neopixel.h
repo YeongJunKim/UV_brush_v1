@@ -9,69 +9,59 @@
 #define NEOPIXEL_H_
 
 #include "main.h"
-#include "string.h"
-#define BIT_PERIOD 	10
-#define BIT_HIGH	6
-#define BIT_LOW		3
+#include "stdlib.h"
+#define BIT_PERIOD 	40
+#define BIT_HIGH	11
+#define BIT_LOW		30\
 
 uint8_t is_init = 0;
 uint16_t led_cnt = 0;
 
-uint8_t led_buf[50 + 32*64];
+uint8_t led_buf[70+32];
 
 extern TIM_HandleTypeDef htim2;
 
-void neopixel_init(void)
+void neopixel_init(int cnt)
 {
-	memset(led_buf, 0, sizeof(led_buf));
-	is_init = 1;
+//	led_buf = (uint8_t*)malloc(sizeof(uint8_t)*32*cnt+70);
+	for(int i = 0; i < 70; i++)
+		led_buf[i] = 40;
+
 }
-
-void neopixel_begin(uint32_t led_cnt)
+void neopixel_pause(void)
 {
-	led_cnt = led_cnt;
-
-	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_2, (uint32_t *)led_buf, (50 + 32 * led_cnt) * 1);
+	HAL_TIM_PWM_Stop_DMA(&htim2, TIM_CHANNEL_2);
 }
-void neopixel_SetColor(uint32_t index, uint8_t red, uint8_t green, uint8_t blue, uint8_t white)
+void neopixel_begin(void)
 {
-	uint8_t r_bit[8];
-	uint8_t g_bit[8];
-	uint8_t b_bit[8];
-	uint8_t w_bit[8];
-
-	uint32_t offset;
-
-	for (int i = 0; i < 8; i ++)
+	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_2, (uint32_t *)led_buf, sizeof(led_buf));
+}
+void neopixel_SetColor(uint32_t cnt, uint8_t red, uint8_t green, uint8_t blue, uint8_t white)
+{
+	uint32_t cnt_ = cnt - 1;
+	for(int i = 0; i < 8; i ++)
 	{
-		if(red & (1<<7))
-			r_bit[i] = BIT_HIGH;
+		uint16_t index_red 		= 69+32*cnt_+8-i;
+		uint16_t index_green 	= 69+32*cnt_+16-i;
+		uint16_t index_blue 	= 69+32*cnt_+24-i;
+		uint16_t index_white 	= 69+32*cnt_+32-i;
+		if(green >> i & 0x01)
+			led_buf[index_red] = BIT_HIGH;
 		else
-			r_bit[i] = BIT_LOW;
-		red <<= 1;
-		if(red & (1<<7))
-			g_bit[i] = BIT_HIGH;
+			led_buf[index_red] = BIT_LOW;
+		if(red >> i & 0x01)
+			led_buf[index_green] = BIT_HIGH;
 		else
-			g_bit[i] = BIT_LOW;
-		green <<= 1;
-		if(red & (1<<7))
-			b_bit[i] = BIT_HIGH;
+			led_buf[index_green] = BIT_LOW;
+		if(blue >> i & 0x01)
+			led_buf[index_blue] = BIT_HIGH;
 		else
-			b_bit[i] = BIT_LOW;
-		blue <<= 1;
-		if(red & (1<<7))
-			w_bit[i] = BIT_HIGH;
+			led_buf[index_blue] = BIT_LOW;
+		if(white >> i & 0x01)
+			led_buf[index_white] = BIT_HIGH;
 		else
-			w_bit[i] = BIT_LOW;
-		white <<= 1;
+			led_buf[index_white] = BIT_LOW;
 	}
-
-	offset = 50;
-
-	memcpy(&led_buf[offset + index*32 + 8 * 0], g_bit, 8*1);
-	memcpy(&led_buf[offset + index*32 + 8 * 1], r_bit, 8*1);
-	memcpy(&led_buf[offset + index*32 + 8 * 2], b_bit, 8*1);
-	memcpy(&led_buf[offset + index*32 + 8 * 3], w_bit, 8*1);
 }
 
 

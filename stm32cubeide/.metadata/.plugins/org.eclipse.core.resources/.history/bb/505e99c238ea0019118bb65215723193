@@ -1,0 +1,45 @@
+/*
+ * neopixel.h
+ *
+ *  Created on: Oct 8, 2019
+ *      Author: colson
+ */
+
+#ifndef NEOPIXEL_H_
+#define NEOPIXEL_H_
+
+#include "main.h"
+#include "stdlib.h"
+#define BIT_PERIOD 	10
+#define BIT_HIGH	6
+#define BIT_LOW		3
+
+uint8_t is_init = 0;
+uint16_t led_cnt = 0;
+
+uint8_t *led_buf;
+
+extern TIM_HandleTypeDef htim2;
+
+void neopixel_init(int cnt)
+{
+	led_buf = (uint8_t*)malloc(sizeof(uint8_t)*32*cnt);
+}
+
+void neopixel_begin(uint32_t led_cnt)
+{
+	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_2, (uint32_t *)led_buf, sizeof(led_buf));
+}
+void neopixel_SetColor(uint32_t cnt, uint8_t red, uint8_t green, uint8_t blue, uint8_t white)
+{
+	for(int i = 0; i < 8; i ++)
+	{
+		if(red >> i & 0x01)
+			led_buf[69+8-i] = 10;
+		else
+			led_buf[69+8-i] = 31;
+	}
+}
+
+
+#endif /* NEOPIXEL_H_ */

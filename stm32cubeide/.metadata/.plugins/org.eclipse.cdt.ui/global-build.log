@@ -7530,3 +7530,1287 @@ Finished building: default.size.stdout
  
 Finished building: neopixel.list
  
+10:52:12 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -c -I../ -x assembler-with-cpp --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32l031f4px.o" "../Startup/startup_stm32l031f4px.s"
+arm-none-eabi-gcc "../Src/brush.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/brush.d" -MT"Src/brush.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/brush.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_hal_msp.d" -MT"Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_it.d" -MT"Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32l0xx.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32l0xx.d" -MT"Src/system_stm32l0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32l0xx.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:12: error: expected expression before '{' token
+  led_buf = {0,};
+            ^
+make: *** [Src/subdir.mk:38: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+10:52:15 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -c -I../ -x assembler-with-cpp --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32l031f4px.o" "../Startup/startup_stm32l031f4px.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_hal_msp.d" -MT"Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_it.d" -MT"Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32l0xx.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32l0xx.d" -MT"Src/system_stm32l0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32l0xx.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "neopixel.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\neopixel\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="neopixel.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: neopixel.elf
+ 
+arm-none-eabi-objdump -h -S  neopixel.elf  > "neopixel.list"
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+Finished building: neopixel.list
+ 
+10:53:47 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:24:6: warning: type of 'cnt' defaults to 'int' [-Wimplicit-int]
+ void neopixel_init(cnt)
+      ^~~~~~~~~~~~~
+../Src/neopixel.h:26:12: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = malloc((uint8_t *)sizeof(uint8_t)*32*cnt);
+            ^~~~~~
+../Src/neopixel.h:26:12: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:12: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+../Src/neopixel.h:26:45: error: invalid operands to binary * (have 'uint8_t * {aka unsigned char *}' and 'int')
+  led_buf = malloc((uint8_t *)sizeof(uint8_t)*32*cnt);
+                                             ^
+make: *** [Src/subdir.mk:38: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+10:53:50 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:54:24 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:24:6: warning: type of 'cnt' defaults to 'int' [-Wimplicit-int]
+ void neopixel_init(cnt)
+      ^~~~~~~~~~~~~
+../Src/neopixel.h:26:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t *)malloc(sizeof(uint8_t)*32*cnt);
+                       ^~~~~~
+../Src/neopixel.h:26:23: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:54:28 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:54:46 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t *)malloc(sizeof(uint8_t)*32*cnt);
+                       ^~~~~~
+../Src/neopixel.h:26:23: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:54:48 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:55:02 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t *)malloc(sizeof(uint8_t)*32);
+                       ^~~~~~
+../Src/neopixel.h:26:23: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:55:04 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:55:09 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t *)malloc(sizeof(uint8_t)*32*cnt);
+                       ^~~~~~
+../Src/neopixel.h:26:23: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:55:11 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:55:35 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t *)malloc(sizeof(uint8_t)*32*cnt);
+                       ^~~~~~
+../Src/neopixel.h:26:23: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+../Src/neopixel.h:25:11: warning: variable 'led_buf' set but not used [-Wunused-but-set-variable]
+  uint8_t *led_buf;
+           ^~~~~~~
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:55:38 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:55:41 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:23: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t *)malloc(sizeof(uint8_t)*32*cnt);
+                       ^~~~~~
+../Src/neopixel.h:26:23: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:23: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:55:43 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:55:45 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t*)malloc(sizeof(uint8_t)*32*cnt);
+                      ^~~~~~
+../Src/neopixel.h:26:22: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:55:47 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:56:58 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t*)malloc(sizeof(uint8_t)*32*cnt);
+                      ^~~~~~
+../Src/neopixel.h:26:22: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:57:01 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:57:44 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t*)malloc(sizeof(uint8_t)*32*cnt);
+                      ^~~~~~
+../Src/neopixel.h:26:22: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:57:46 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:58:15 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t*)malloc(sizeof(uint8_t));
+                      ^~~~~~
+../Src/neopixel.h:26:22: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:58:17 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:58:29 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:12: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = malloc(sizeof(uint8_t)*32*cnt);
+            ^~~~~~
+../Src/neopixel.h:26:12: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:12: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:58:31 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:58:37 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:26:22: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  led_buf = (uint8_t*)malloc(sizeof(uint8_t)*32*cnt);
+                      ^~~~~~
+../Src/neopixel.h:26:22: warning: incompatible implicit declaration of built-in function 'malloc'
+../Src/neopixel.h:26:22: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:58:39 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+10:58:58 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+10:59:01 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:02:34 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12156	     12	   1980	  14148	   3744	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:02:36 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:08:52 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -c -x assembler-with-cpp --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32l031f4px.o" "../Startup/startup_stm32l031f4px.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_hal_msp.d" -MT"Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_hal_msp.o"
+arm-none-eabi-gcc "../Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_it.d" -MT"Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_it.o"
+arm-none-eabi-gcc "../Src/system_stm32l0xx.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/system_stm32l0xx.d" -MT"Src/system_stm32l0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32l0xx.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_SetColor':
+../Src/neopixel.h:38:12: warning: unused variable 'index' [-Wunused-variable]
+   uint16_t index = 69+8*cnt-i;
+            ^~~~~
+../Src/neopixel.h:35:11: warning: unused variable 'cnt_' [-Wunused-variable]
+  uint32_t cnt_ = cnt - 1;
+           ^~~~
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_iwdg.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.d" -MT"Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11804	     12	   1836	  13652	   3554	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:08:56 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:09:02 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_SetColor':
+../Src/neopixel.h:38:12: warning: unused variable 'index' [-Wunused-variable]
+   uint16_t index = 69+8*cnt_-i;
+            ^~~~~
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11804	     12	   1836	  13652	   3554	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:09:04 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:09:13 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_SetColor':
+../Src/neopixel.h:38:12: warning: unused variable 'index' [-Wunused-variable]
+   uint16_t index = 69+8*cnt_-i;
+            ^~~~~
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11804	     12	   1836	  13652	   3554	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:09:15 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:09:17 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11804	     12	   1836	  13652	   3554	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:09:19 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:09:49 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11804	     12	   1836	  13652	   3554	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:09:51 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:10:32 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12580	    112	   1856	  14548	   38d4	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:10:34 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:10:39 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12580	    112	   1856	  14548	   38d4	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+11:12:08 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12580	    112	   1856	  14548	   38d4	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:13:15 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12480	    112	   1848	  14440	   3868	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:13:17 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:13:25 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12480	    112	   1848	  14440	   3868	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:14:15 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12484	    112	   1848	  14444	   386c	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:15:45 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11704	     12	   1828	  13544	   34e8	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:18:23 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:19:11 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11708	     12	   1828	  13548	   34ec	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:19:58 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h: In function 'neopixel_init':
+../Src/neopixel.h:28:3: error: 'lws_buf' undeclared (first use in this function); did you mean 'led_buf'?
+   lws_buf[i] = 40;
+   ^~~~~~~
+   led_buf
+../Src/neopixel.h:28:3: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:38: Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+11:20:00 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:20:03 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12136	    112	   1848	  14096	   3710	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:20:05 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:20:36 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12520	    112	   1848	  14480	   3890	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:23:10 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12520	    112	   1848	  14480	   3890	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+11:25:11 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12116	     12	   1932	  14060	   36ec	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:25:13 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:25:17 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12116	     12	   1932	  14060	   36ec	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+11:26:26 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12112	     12	   1932	  14056	   36e8	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:28:36 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12112	     12	   1932	  14056	   36e8	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:31:33 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:179:3: error: too few arguments to function 'neopixel_begin'
+   neopixel_begin();
+   ^~~~~~~~~~~~~~
+In file included from ../Src/main.c:27:0:
+../Src/neopixel.h:32:6: note: declared here
+ void neopixel_begin(uint32_t led_cnt)
+      ^~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:38: Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+11:31:35 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+11:31:56 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13292	     12	   1932	  15236	   3b84	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:32:25 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13292	     12	   1932	  15236	   3b84	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:32:47 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13292	     12	   1932	  15236	   3b84	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:33:06 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13292	     12	   1932	  15236	   3b84	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:33:17 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13292	     12	   1932	  15236	   3b84	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+11:34:10 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13696	    112	   1848	  15656	   3d28	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:34:48 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13292	     12	   1932	  15236	   3b84	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:37:09 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13376	     12	   1932	  15320	   3bd8	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:38:09 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13416	     12	   1932	  15360	   3c00	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:39:03 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13404	     16	   1936	  15356	   3bfc	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:42:02 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13808	     16	   1936	  15760	   3d90	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+11:42:12 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13808	     16	   1936	  15760	   3d90	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+11:51:39 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13812	     16	   1936	  15764	   3d94	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+12:00:40 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.0.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.0.0.201904181610\tools\arm-none-eabi\bin\ld.exe: UV_brush_holder_v2.elf section `.text' will not fit in region `FLASH'
+c:\st\stm32cubeide_1.0.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.0.0.201904181610\tools\arm-none-eabi\bin\ld.exe: region `FLASH' overflowed by 2116 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: UV_brush_holder_v2.elf] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+12:00:42 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:01:09 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14904	     16	   1968	  16888	   41f8	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+12:01:11 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:01:43 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14916	     16	   1968	  16900	   4204	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+12:01:45 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:02:01 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14912	     16	   1968	  16896	   4200	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+12:02:03 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:02:20 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14912	     16	   1968	  16896	   4200	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+12:04:08 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:265:17: error: 'OFFF' undeclared (first use in this function); did you mean 'OFF'?
+      set_uv_led(OFFF);
+                 ^~~~
+                 OFF
+../Src/main.c:265:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:38: Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+12:04:10 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:04:13 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:265:17: error: 'OFFOFF' undeclared (first use in this function); did you mean 'OFF'?
+      set_uv_led(OFFOFF);
+                 ^~~~~~
+                 OFF
+../Src/main.c:265:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:38: Src/main.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
+12:04:15 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:04:18 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14944	     16	   1968	  16928	   4220	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+12:04:20 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:04:25 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14944	     16	   1968	  16928	   4220	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+12:05:55 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14984	     16	   1968	  16968	   4248	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+12:05:57 **** Incremental Build of configuration Debug for project neopixel ****
+make -j6 all 
+arm-none-eabi-size   neopixel.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10964	     12	   1948	  12924	   327c	neopixel.elf
+Finished building: default.size.stdout
+ 
+12:06:02 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14984	     16	   1968	  16968	   4248	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+12:06:03 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14984	     16	   1968	  16968	   4248	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+12:06:11 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14984	     16	   1968	  16968	   4248	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+12:10:00 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15060	     16	   1976	  17052	   429c	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+14:07:02 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\dud37\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UV_brush_holder_v2.elf
+ 
+arm-none-eabi-objdump -h -S  UV_brush_holder_v2.elf  > "UV_brush_holder_v2.list"
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15056	     16	   1976	  17048	   4298	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
+Finished building: UV_brush_holder_v2.list
+ 
+14:07:14 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+make -j6 all 
+arm-none-eabi-size   UV_brush_holder_v2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15056	     16	   1976	  17048	   4298	UV_brush_holder_v2.elf
+Finished building: default.size.stdout
+ 
