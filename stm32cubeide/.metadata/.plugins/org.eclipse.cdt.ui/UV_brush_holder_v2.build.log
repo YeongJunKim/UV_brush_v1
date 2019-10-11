@@ -1,16 +1,10 @@
-06:09:19 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
+16:25:26 **** Incremental Build of configuration Debug for project UV_brush_holder_v2 ****
 make -j4 all 
-arm-none-eabi-gcc "../Src/stm32l0xx_hal_msp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_hal_msp.d" -MT"Src/stm32l0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_hal_msp.o"
-arm-none-eabi-gcc "../Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/stm32l0xx_it.d" -MT"Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32l0xx_it.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L031xx -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "UV_brush_holder_v2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\colson\Desktop\workspace\UV_brush_v1\stm32cubeide\UV_brush_holder_v2\STM32L031F4PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UV_brush_holder_v2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: UV_brush_holder_v2.elf
- 
 arm-none-eabi-size   UV_brush_holder_v2.elf 
    text	   data	    bss	    dec	    hex	filename
-  15024	     16	   1968	  17008	   4270	UV_brush_holder_v2.elf
+  15088	     16	   1976	  17080	   42b8	UV_brush_holder_v2.elf
 Finished building: default.size.stdout
  
 
-06:09:21 Build Finished. 0 errors, 0 warnings. (took 2s.61ms)
+16:25:27 Build Finished. 0 errors, 0 warnings. (took 1s.402ms)
 

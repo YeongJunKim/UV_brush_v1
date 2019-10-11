@@ -11,11 +11,11 @@
 #include "main.h"
 #include "stdlib.h"
 
-#define NEOPIXEL_6061
+#define NEOPIXEL_MINI
 #ifdef NEOPIXEL_MINI
 
 #else
-#define NEOPIXEL_6061
+#define NEOPIXEL_6061_
 #endif
 
 #define BIT_PERIOD 	40
